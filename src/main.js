@@ -55,6 +55,7 @@ let string = `/*你好，我是一名前端工程师
 #div1{
     animation: x 10s infinite linear;    
 }
+/*谢谢观看**/
 `;
 let string2 = "";
 let n = 0;
