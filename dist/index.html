@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>会动的页面</title>
+    <style>* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        *::before {
+            box-sizing: border-box
+        }
+
+        *::after {
+            box-sizing: border-box
+        }
+
+        #html {
+            word-break: break-all;
+        }
+
+        #div1 {
+            position: fixed;
+            right: 20px;
+            top: 20px;
+            width: 400px;
+            height: 400px;
+        }
+
+        #div1::before {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 200px;
+            height: 200px;
+        }
+
+        #div1::after {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 200px;
+            height: 200px;
+        }
+
+        @keyframes x {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @media (max-width: 500px) {
+            #html {
+                height: 50vh;
+                overflow: auto;
+            }
+
+            #div1Wrapper {
+                height: 50vh;
+            }
+
+            #div1 {
+                position: relative;
+                top: 25%;
+                left: 25%;
+                width: 200px;
+                height: 200px;
+            }
+
+            #div1::before {
+                width: 100px;
+                height: 100px;
+            }
+
+            #div1::after {
+                width: 100px;
+                height: 100px;
+            }
+        }</style>
+</head>
+<body>
+<style id="style"></style>
+<div id="html"></div>
+<div id="div1Wrapper">
+    <div id="div1"></div>
+</div>
+<script src="/main.1f19ae8e.js"></script>
+</body>
+</html>
